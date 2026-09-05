@@ -23,10 +23,6 @@ services:
       - INFERENCE_OUTPUT_SCHEMA=plain
       - MEILI_ADDR=http://meilisearch:7700
       - BROWSER_WEB_URL=http://chrome:9222
-      - DATA_DIR="/data" 
-      # You almost never want to change the value of the DATA_DIR variable.
-      # If you want to mount a custom directory, change the volume mapping above instead.
-    # DON'T CHANGE THIS
   chrome:
     image: zenika/alpine-chrome:latest
     restart: unless-stopped
