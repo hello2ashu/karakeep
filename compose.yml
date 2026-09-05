@@ -21,8 +21,8 @@ services:
       - EMBEDDING_DIMENSIONS=768
       - EMBEDDING_CONTEXT_LENGTH=2048
       - INFERENCE_OUTPUT_SCHEMA=plain
-      - MEILI_ADDR: http://meilisearch:7700
-      - BROWSER_WEB_URL: http://chrome:9222
+      - MEILI_ADDR=http://meilisearch:7700
+      - BROWSER_WEB_URL=http://chrome:9222
 
       # You almost never want to change the value of the DATA_DIR variable.
       # If you want to mount a custom directory, change the volume mapping above instead.
@@ -52,10 +52,9 @@ services:
       - EMBEDDING_DIMENSIONS=768
       - EMBEDDING_CONTEXT_LENGTH=2048
       - INFERENCE_OUTPUT_SCHEMA=plain
-      - MEILI_ADDR: http://meilisearch:7700
-      - BROWSER_WEB_URL: http://chrome:9222
-    environment:
-      MEILI_NO_ANALYTICS: "true"
+      - MEILI_ADDR=http://meilisearch:7700
+      - BROWSER_WEB_URL=http://chrome:9222
+      - MEILI_NO_ANALYTICS=true
     volumes:
       - /volume1/docker/karakeep/meilisearch:/meili_data
 
