@@ -23,6 +23,7 @@ services:
       - INFERENCE_OUTPUT_SCHEMA=plain
       - MEILI_ADDR=http://meilisearch:7700
       - BROWSER_WEB_URL=http://chrome:9222
+      - DATA_DIR=/data
   chrome:
     image: zenika/alpine-chrome:latest
     restart: unless-stopped
